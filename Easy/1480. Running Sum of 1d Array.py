@@ -15,15 +15,6 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        """Listenin her elemanı yeni toplamla değiştirilerek başa dönüş engellenir."""
         for i in range(1, len(nums)):
-            # Before:
-            # +---+---+---+---+
-            # | 1 | 2 | 5 | 4 |
-            # +---+---+---+---+
             nums[i] = nums[i - 1] + nums[i]
-            # After:
-            # +---+---+---+---+
-            # | 1 | 3 | 5 | 4 |
-            # +---+---+---+---+
         return nums
