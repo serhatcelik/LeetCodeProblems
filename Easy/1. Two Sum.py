@@ -17,7 +17,6 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
-        """Hash table (dict) kullanılarak performans artırıldı."""
         seen = {}
         for i, num in enumerate(nums):
             diff = target - num
